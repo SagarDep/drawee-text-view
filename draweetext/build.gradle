@@ -1,5 +1,28 @@
 apply plugin: 'com.android.library'
 
+ext {
+    bintrayRepo = 'maven'
+    bintrayName = 'discord-draweetextview'
+
+    publishedGroupId = 'com.discord'
+    libraryName = 'DiscordDraweeTextView'
+    artifact = 'discord-draweetextview'
+
+    libraryDescription = 'Fresco Drawee Span for Android Textviews'
+
+    siteUrl = 'https://github.com/angarron/drawee-text-view'
+    gitUrl = 'https://github.com/angarron/drawee-text-view.git'
+    libraryVersion = '1.0.0'
+
+    developerId = 'angarron'
+    developerName = 'Anderson Garron'
+    developerEmail = 'anderson.garron@gmail.com'
+
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+}
+
 android {
     compileSdkVersion 25
     buildToolsVersion "25.0.1"
@@ -8,8 +31,9 @@ android {
         minSdkVersion 15
         targetSdkVersion 25
         versionCode 1
-        versionName "1.0"
+        versionName "1.0.0"
     }
+
     buildTypes {
         release {
             minifyEnabled false
@@ -27,3 +51,6 @@ dependencies {
     compile 'com.facebook.fresco:animated-base:0.13.0' /*required*/
     provided 'com.facebook.fresco:animated-gif:0.13.0'
 }
+
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/bintrayv1.gradle'
