@@ -1,7 +1,7 @@
 apply plugin: 'com.android.library'
 apply plugin: 'com.jfrog.bintray'
 
-version = '1.0.1'
+version = '1.0.2'
 group = 'com.discord'
 
 android {
@@ -12,7 +12,7 @@ android {
         minSdkVersion 15
         targetSdkVersion 25
         versionCode 1
-        versionName "1.0.1"
+        versionName "1.0.2"
     }
 
     buildTypes {
@@ -41,7 +41,7 @@ bintray {
         vcsUrl ='https://github.com/angarron/drawee-text-view.git'
 
         version {
-            name = '1.0.1'
+            name = '1.0.2'
         }
     }
 }

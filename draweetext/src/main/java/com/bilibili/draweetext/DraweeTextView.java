@@ -127,8 +127,10 @@ public class DraweeTextView extends TextView {
     }
 
     private DraweeSpan[] getImages() {
-        if (mHasDraweeInText && length() > 0)
-            return ((Spanned) getText()).getSpans(0, length(), DraweeSpan.class);
+        final CharSequence text = getText();
+        if (mHasDraweeInText && length() > 0 && text instanceof Spanned) {
+            return ((Spanned) text).getSpans(0, length(), DraweeSpan.class);
+        }
         return new DraweeSpan[0]; //TODO: pool empty typed array
     }
 
